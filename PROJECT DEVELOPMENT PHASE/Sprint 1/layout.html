@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %} 
+          <title>Inventory-{{title}}</title> <!-- fetches the value of title from argument passed !-->
+    {% else %}
+           <title>Inventory management system</title>
+    {%  endif %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong&effect=neon|3D font effect">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type ="text/css" href="{{url_for('static', filename='main.css')}}">
+</head>
+<body>
+   
+	<nav class="navbar navbar-inverse"> <!---this create a navbar in darkmode -->
+		<div class="container">
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><!---resize-navbar get hidden and button appears -->
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>                        
+			</button>
+			<a class="navbar-brand font-effect-3D font effect" style="color:azure;font-size:xx-large;"  href="#">Inventory management system</a>
+		  </div>
+		  <div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+			  <li class="active"><a href="/">Home</a></li>
+			  <li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a href="/viewproducts">View products</a></li>
+				  <li><a href="/addproducts">Add products</a></li>
+				  <li><a href="/delproducts">Delete products</a></li>
+				</ul>
+			  </li>
+			  <li><a href="#">Dashboard</a></li>
+			 
+			  <li><a href="/purchase">Purchase</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="/register"><span class="glyphicon glyphicon-user"></span> register</a></li>
+			  <li><a href="/login"><span class="glyphicon glyphicon-log-in "></span> login</a></li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	  
+	<div>
+    <div  style="padding: 25px 50px 75px 100px;" >
+		{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+		  {% for category, message in messages %}
+			<div class="alert alert-{{ category }}">
+			  {{ message }}
+			</div>
+		  {% endfor %}
+		{% endif %}
+	  {% endwith %}
+	{% block content %}
+	          <div class="container"></div>
+              <h1>this is just a sample</h1>
+    {% endblock %}
+    </div>
+   <div>
+	
+
+<div style="padding-top:400px;">
+	<footer class="text-center text-white" style="background-color: #fd8a5c;">
+	  
+	  <div class="container">
+		<section class="mt-5" >
+		  <div class="row text-center d-flex justify-content-center pt-5">
+			<div class="col-md-2">
+			  <h6 class="text-uppercase font-weight-bold">
+				<a href="#!" class="text-white">About us</a>
+			  </h6>
+			</div>
+
+			<div class="col-md-2">
+			  <h6 class="text-uppercase font-weight-bold">
+				<a href="#!" class="text-white">Help</a>
+			  </h6>
+			</div>
+
+			<div class="col-md-2">
+			  <h6 class="text-uppercase font-weight-bold">
+				<a href="#!" class="text-white">Contact Us</a>
+			  </h6>
+			</div>
+		  </div>
+		</section>
+  
+		<hr class="my-5" />
+  
+		<section class="mb-5">
+		  <div class="row d-flex justify-content-center">
+			<div class="col-lg-8">
+			</div>
+		  </div>
+		</section>
+  
+		<section class="text-center mb-5">
+		  <a href="" class="text-white me-4">
+			<i class="fab fa-facebook-f"></i>
+		  </a>
+		  <a href="" class="text-white me-4">
+			<i class="fab fa-twitter"></i>
+		  </a>
+		  <a href="" class="text-white me-4">
+			<i class="fab fa-google"></i>
+		  </a>
+		  <a href="" class="text-white me-4">
+			<i class="fab fa-instagram"></i>
+		  </a>
+		  <a href="" class="text-white me-4">
+			<i class="fab fa-linkedin"></i>
+		  </a>
+		  <a href="" class="text-white me-4">
+			<i class="fab fa-github"></i>
+		  </a>
+		</section>
+		
+	  </div>
+  
+
+	  <div class="text-center p-3"  style="background-color: rgba(233, 56, 233, 0.2)"  >
+		© 2022 Copyright -made by Harshini,Sam,Sneha,Sindu
+	  </div>
+	</footer>
+  </div>
+  </div>    
+</body>
+</html>
