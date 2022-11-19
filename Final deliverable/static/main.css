@@ -1,0 +1,89 @@
+
+	* {
+		margin: 0;
+		padding: 0;
+		font-family:"Trirong";
+		font-size: x-large;
+	}
+
+	.navbarr {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: sticky;
+		top: 0;
+		cursor: pointer;
+	}
+
+	.background {
+		background: rgb(130, 44, 228);
+		background-blend-mode: darken;
+		background-size: cover;
+	}
+
+	.nav-list {
+		width: 70%;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo img {
+		width: 50px;
+		border-radius: 60px;
+	}
+
+	.nav-list li {
+		list-style: none;
+		padding: 26px 30px;
+	}
+
+	.nav-list li a {
+		text-decoration: none;
+		color: rgb(7, 7, 7);
+	}
+
+	.nav-list li a:hover {
+		color: rgb(247, 122, 91);
+	}
+
+	.rightnav {
+		width: 30%;
+		text-align: right;
+	}
+
+	#search {
+		padding: 5px;
+		font-size: 17px;
+		border: 2px solid rgb(74, 230, 170);
+		border-radius: 9px;
+	}
+
+	.content-section {
+		background: #ffffff;
+		padding: 10px 20px;
+		border: 1px solid #dddddd;
+		border-radius: 3px;
+		margin-bottom: 20px;
+	  }
+	  .masthead {
+		  height: 100vh;
+		  min-height: 500px;
+		  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+	}
+	
+
+	
+	
+	
+
+	
+

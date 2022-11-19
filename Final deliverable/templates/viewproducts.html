@@ -1,0 +1,28 @@
+{% extends "layout.html" %} 
+{% block content %} 
+       <h1>View the products in inventory</h1>
+       <div class="container">
+       <table class=" table table-stripped" >
+       	<thead>
+       		<tr>
+       			<th>ITEM ID</th>
+       			<th>ITEM NAME</th>
+       			<th>QUANTITY</th>
+       			<th>PRICE</th>
+       		</tr>
+       		
+       	</thead>
+       	<tbody>
+       		{% for row in arr: %}
+       		<tr>
+       				{% for it in row: %}
+       					<td> {{ it }} </td>
+       				{% endfor %}
+       		</tr>
+       		{% endfor %}
+       	</tbody>
+       </table>
+       </div>
+{% endblock content %}
+
+

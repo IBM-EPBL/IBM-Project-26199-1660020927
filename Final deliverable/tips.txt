@@ -1,0 +1,4 @@
+templates - create a folders named like this so that flask could render the templates of html and css from that directory
+url_for-> pass the function or method named\
+pylance problem- try to reinstall and change interpreter
+and in the href-> provide /filename without extentsion ex:/about instead of about.html
