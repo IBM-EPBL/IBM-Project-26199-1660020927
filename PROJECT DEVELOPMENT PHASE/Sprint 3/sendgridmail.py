@@ -5,7 +5,7 @@ from sendgrid.helpers.mail import Mail
 def sendmail(usermail,subject,content):
     message = Mail(from_email='harshinisivakami@student.tce.edu',to_emails=usermail,subject=subject,html_content='<b> {} </b>'.format(content))
     try:
-        sg = SendGridAPIClient('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')
+        sg = SendGridAPIClient('SENDGRID_API_KEY')
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
